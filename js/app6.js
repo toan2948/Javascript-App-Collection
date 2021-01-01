@@ -12,7 +12,8 @@
 function showInfo(){
     // turn an object to a json
     let j = JSON.stringify(myInfo);
-    // turn an definition (json?) to an object
+    // turn an json to an object
     let o =JSON.parse(j);
-   document.getElementById('jsonInfo').innerText= myInfo.showname() + j;
+   document.getElementById('jsonInfo').innerText= 'JSON format: ' + j;
+
 }

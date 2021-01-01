@@ -1,5 +1,5 @@
 /*App 1 */
-  function popUp(){ // Function for inputting some words in a text box
+function popUp(){ // Function for inputting some words in a text box
     let a = document.getElementById('etwas-to-show').value;
     if(a.length ==0){
         alert('bitte etwas eingeben');

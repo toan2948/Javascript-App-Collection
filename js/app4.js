@@ -6,7 +6,7 @@
      timer=setInterval(function(){
          count++;
          document.getElementById('count').innerText = 'now counting: '+ count;
-     },500);
+     },300);
  }
  function stopCount(){
      clearInterval(timer);
