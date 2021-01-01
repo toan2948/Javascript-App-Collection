@@ -3,71 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app1.js"></script>
+    <script src="app2.js"></script>
+    <script src="app3.js"></script>
+    <script src="app4.js"></script>
+
+
     <script >
         //klassen
         //  import { Bild } from './Bild.js';
         // let bild1= new Bild('auto.jpg',1);
-        /*App 1 */
-        function popUp(){ // Function for inputting some words in a text box
-            let a = document.getElementById('etwas-to-show').value;
-            if(a.length ==0){
-                alert('bitte etwas eingeben');
-            }
-            else{
-            document.getElementById('show-etwas').innerText= a;
-            }
-            document.getElementById('etwas-to-show').value ='';
-        }     
-        
-        function verstecken(){ // Function for hiding an element (for example: <p>) 
-            document.getElementById('test').style.display='none';
-        }
-      
-        function anzeigen(){   // Function for showing an hidden element (for example: <p>) 
-            document.getElementById('test').style.display='block';
-        }
-       
-        function hinUndHer(){  // Function for hiding ans showing an element (for example: <p>) 
-            let a=document.getElementById('test').style.display;
-            let b =document.getElementById('test');
-            if(a =='none'){
-                //a ='block'; does not work
-                b.style.display ='block';
-            }
-            else {
-                b.style.display ='none';   
-            }
-        }
-
-        /* App 2: Creating element from a function */
-        function GUIerstellen(){
-            let div = document.createElement('input');
-            div.type ='button';
-            div.value ='ein erstellt button';
-            div.id='testGUIFunction';
-            div.onclick=testGUIFunction;
-           // document.body.appendChild(div);
-           document.getElementById('gui').appendChild(div);
-
-        }
-        function testGUIFunction(){
-            alert('you have created a button');
-            let h =document.createElement('h2');
-            let t =document.createTextNode('A newly created element h2');
-            h.appendChild(t);
-            document.getElementById('gui').appendChild(h);
-        }
-
-        /* App 3*/
-        function umwandeln(){
-            let a=document.getElementById('umzuwandeln').value;
-            let b=document.getElementById('umwandler').value;
-            document.getElementById('umwandeln-result').innerText ='Result: ' + a*b;
-        }
-
-        function test(){
-            alert ('hi');
-        }
+  
+   
+        /* App 5 */
         //array, map
         let bildArray =[
             'auto.jpg',
@@ -125,28 +73,25 @@
 </head>
 <body onload="setInterval(runBildArray,600)" >
     <div class='grid-container'>
-            <!-- App 1-->
-        <div class='div-border'>
+        <div class='div-border' id='app1'>
             <h3 style="margin-top: 5px;;">App 1: show the typed word</h3>
             <input type="text" id='etwas-to-show' placeholder="type etwas ...." >
             <button onclick='popUp()'>click</button>
             <p>you have typed: <span id='show-etwas'></span></p>
         
             <h2>Hide and Show</h2>
-            <input type="button" id='ver' value="verstec" onclick="verstecken()">
+            <input type="button" id='ver' value="versteck" onclick="verstecken()">
             <input type="button" id ='an' value="anzeigen" onclick="anzeigen()">
             <input type="button" id ='hin' value="hin und hershalten" onclick="hinUndHer()">
 
             <div id='test'>This sentence will be showed or hidden after clicking the above Button</div>
         </div>
-            <!-- App 2-->
-        <div class='div-border' id='gui' style="background-color: red; ">
-            <h3>App 2: GUI - erstellen</h3>
+        <div class='div-border' id='app2' style="background-color: red; ">
+            <h3>App 2: GUI erstellen - create new elements)</h3>
             <input type="button" onclick="GUIerstellen()" value="click to generate an Element">
         </div>
-            <!-- App 3-->
-        <div class='div-border'>
-            <h3>App 3: Umwandler</h3>
+        <div class='div-border' id='app3'>
+            <h3>App 3: Umwandler - Converter</h3>
             <input type="number" name="" id="umzuwandeln">
             <select name="" id="umwandler">
                 <option value="10">cm to mm</option>
@@ -156,15 +101,17 @@
             <p id='umwandeln-result'></p>
         </div>
 
-        <div class='div-border'>
-            <h3>Timers function aufgerufen nach 2s</h3>
+        <div class='div-border' id='app4'>
+            <h3>App 4: Timer</h3>
             <div>
-                <h3 onclick="setTimeout(test,500)">hello</h3>
+                <input type="button" id='btn-counter' onclick="timedFunction()" value="Initiate a Timer" >
+                <h3 id='count'>counting start here:</h3>
+                <input type="button" value="Stop Counting" onclick="stopCount()">
             </div>
         </div>
 
         <div class='div-border'>
-            <h3>Donnerstag-Array-Elefant Bilder</h3>
+            <h3>App 5: Donnerstag-Array-Elefant Bilder</h3>
             <p class='anzahlElefant'></p>
             <img class='bild-array' src="" alt="no bild" width='100' height ='100'>
             
