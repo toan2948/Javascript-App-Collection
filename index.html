@@ -8,31 +8,11 @@
     <script src="app3.js"></script>
     <script src="app4.js"></script>
     <script src="app5.js"></script>
-
-
-
+    <script src="app6.js"></script>
     <script >
         //klassen
         //  import { Bild } from './Bild.js';
         // let bild1= new Bild('auto.jpg',1);
-
-       
-        //json
-        let myInfo ={
-            name:'toan',
-            age: 31,
-            city: 'berlin',
-            showname: function(){
-                return this.name +' '+ this.age;
-            }
-        };
-        function showInfo(){
-            // turn an object to a json
-            let j = JSON.stringify(myInfo);
-            // turn an definition (json?) to an object
-            let o =JSON.parse(j);
-           document.getElementById('jsonInfo').innerText= myInfo.showname() + j + o.name;
-        }
         //get, post
         function sendGET(){
             let data = document.getElementById('input-for-GET').value;
@@ -97,9 +77,9 @@
             
         </div>
 
-        <div class="div-border">
-            <h3>JSON</h3>
-            <input type="button" onclick='showInfo()' value="click mich">
+        <div class="div-border" id='app6'>
+            <h3>App 6: JSON</h3>
+            <input type="button" onclick='showInfo()' value="Show my data">
             <p id='jsonInfo'>hallo</p>
         </div>
 
