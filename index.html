@@ -2,31 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="js/app7.js"></script> <!--this js file must be aobve other js file, which also show images. Only then it can work-->
+    <script src="js/app-showCountryInfo.js"></script> <!--this js file must be aobve other js file, which also show images. Only then it can work-->
     <script src="js/app1.js"></script>
     <script src="js/app2.js"></script>
     <script src="js/app3.js"></script>
     <script src="js/app4.js"></script>
+    <script src="js/app-puzzle.js"></script>
+
+    <script >
+        //load the function of app-showCountryInfo
+        window.addEventListener("load", myInit, true); 
+        function myInit(){  
+            setInterval(showCountryInfo,1300);
+        };   
+        //load the function of app-puzzle
+        window.addEventListener("load", myInit2, true); 
+        function myInit2(){ 
+            generateFeld();
+        };  
+
+    </script>
     <link rel="stylesheet" href="style.css">
     <title>All-Apps</title>
 </head>
-<body onload="setInterval(showCountryInfo,1300)">
+<body onload="">
     <div class='grid-container'>
-        <div class='div-border' id='app1'>
-            <h3 style="margin-top: 5px;">App 1: show the typed word</h3>
-            <input type="text" id='etwas-to-show' placeholder="type etwas ...." >
-            <button onclick='popUp()'>click</button>
-            <p>you have typed: <span id='show-etwas'></span></p>
-        
-            <h2>Hide and Show</h2>
-            <input type="button" id='ver' value="versteck" onclick="verstecken()">
-            <input type="button" id ='an' value="anzeigen" onclick="anzeigen()">
-            <input type="button" id ='hin' value="hin und hershalten" onclick="hinUndHer()">
-
-            <div id='test'>This sentence will be showed or hidden after clicking the above Button</div>
-        </div>
-        <div class="div-border" id='app7' id='sub-grid'>
-            <h3>App 7: Show Info of Countries (Class + JSON)</h3>
+       
+        <div class="div-border" id='app-showCountryInfo' id='sub-grid'>
+            <h3>App: Show Info of Countries (Class + JSON)</h3>
             <br>
             <div id='sub-grid'>
                 <div>
@@ -38,6 +41,10 @@
                 </div>
             </div>  
             <div id='country-JSON' style="font-size:small"></div>          
+        </div>
+        <div class='div-border' id='app-puzzle'>
+            <h3>App: 15-Puzzle</h3>
+            <p>click on buttons to move the blank button to wherever you want:</p>
         </div>
         <div class='div-border' id='app3'>
             <h3>App 3: Umwandler - Converter</h3>
@@ -72,6 +79,20 @@
                     <input type="button" value="Anmelden" onclick="eingabenPruefen()" />
                 </form>
             </div>
+        </div>
+       
+        <div class='div-border' id='app1'>
+            <h3 style="margin-top: 5px;">App 1: show the typed word</h3>
+            <input type="text" id='etwas-to-show' placeholder="type etwas ...." >
+            <button onclick='popUp()'>click</button>
+            <p>you have typed: <span id='show-etwas'></span></p>
+        
+            <h2>Hide and Show</h2>
+            <input type="button" id='ver' value="versteck" onclick="verstecken()">
+            <input type="button" id ='an' value="anzeigen" onclick="anzeigen()">
+            <input type="button" id ='hin' value="hin und hershalten" onclick="hinUndHer()">
+
+            <div id='test'>This sentence will be showed or hidden after clicking the above Button</div>
         </div>
          <!--
         <div class='div-border' id='app2' style="background-color: red; ">
