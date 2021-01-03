@@ -1,7 +1,7 @@
 function generateSelect(){
   let html ='';
   html+=  "<select id='select-hour' onchange='selectHour()'>";
-  for(let i =0;i<13;i++){
+  for(let i =0;i<25;i++){
     html +=  '<option value="'+i +'">'+i+'</option>';
   }           
   html+='</select>' +':';
@@ -28,12 +28,13 @@ let timeDown ='';
 let h='';
 let m ='';
 let s='';
+let audio;
 
 function startTime() {
   let d = new Date();
-   h=d.getHours();
-   m =d.getMinutes();
-   s=d.getSeconds();
+  h=d.getHours();
+  m =d.getMinutes();
+  s=d.getSeconds();
   m= checkTime(m);
   s= checkTime(s);
   document.getElementById('time').innerText=
@@ -50,22 +51,28 @@ document.addEventListener('change',function(e){
 document.addEventListener('change',function(e){
   if(e.target && e.target.id== 'select-minute'){
         minute =document.getElementById('select-minute').value;
-        alert(minute);
    }
 });
 
 function setAlarm(){
-
-  alert(timeDown);
+  timeDown = (hour-h)*3600 + (minute-m)*60;
   let timer = setInterval(function(){
       timeDown--;
       document.getElementById('show-timeDown').innerHTML=timeDown + ' :second(s) left'
       if(timeDown<=0){
-        alert('alarmed');
         clearInterval(timer);
         document.getElementById('show-timeDown').innerHTML='Alarmed!!!';
+        audio = new Audio('alarm.mp3');
+        audio.play();
+        let btnStop = document.getElementById('stop-alarm');
+        btnStop.style.display='block';
+        btnStop.value='Stop Alarm';
+        //add a click to 'stop-alarm' button
+        btnStop.addEventListener("click", turnoffAlarm, false);
       }
-    },500);
-    
+    },10);
+}
+function turnoffAlarm(){
+  audio.pause();
 }
 
