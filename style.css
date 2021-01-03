@@ -1,6 +1,6 @@
 .grid-container{
     display:grid;
-    grid-template-columns: 356px 356px 356px 356px;
+    grid-template-columns: 356px 356px 356px;
     grid-column-gap:20px;
     grid-row-gap: 20px;
     align-content: space-evenly;
@@ -19,10 +19,10 @@
     height:280px;
 }
 
-#app4{
-    padding-left: 20px;
-}
 #sub-grid{
     display: grid;
     grid-template-columns: 156px 200px;
+}
+.inline-select{
+    display:inline;
 }

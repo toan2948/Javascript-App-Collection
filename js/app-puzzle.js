@@ -25,6 +25,7 @@ function generateFeld(){ // create the puzzle button after loading the page
     }
 }
 
+
 function geklickt(){
     if(Math.abs(this.zeile-lochZeile) + Math.abs(this.spalte-lochSpalte) ==1){
         //Inhalt von this ins Loch schieben
@@ -34,6 +35,5 @@ function geklickt(){
 		lochSpalte=this.spalte;
 		//Inhalt vom neuen Loch leer machen
 		this.innerHTML='&nbsp;';
-		
     }
 }
