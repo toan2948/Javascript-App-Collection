@@ -31,19 +31,21 @@
 </head>
 <body onload="">
     <div class='grid-container'>
-        <div class='div-border' id='app-alarm'>
+        <div class='div-border' id='app-alarm' style="padding-left:40px;">
                 <h3>App: Alarm Clock with Sound</h3>
                 <p>Current time:</p>
                 <div id='time'>  
                 </div>
-                <p>Choose an alarming time:</p>
-                <div class='inline-select' id='hour'>
+                <div>
+                    <p>Choose an alarming time:</p>
+                    <div class='inline-select' id='hour'>
+                    </div>
+                    <div class='inline-select' id='minute'>
+                    </div>
+                    <input id ='set-alarm' type="button" value="Set Alarm" onclick='setAlarm()'>
+                    <p id='show-timeDown'></p>
+                    <input id='stop-alarm' style="display:none" type="button" value="">
                 </div>
-                <div class='inline-select' id='minute'>
-                </div>
-                <input type="button" value="Set Alarm" onclick='setAlarm()'>
-                <p id='show-timeDown'></p>
-                <input id='stop-alarm' style="display:none" type="button" value="">
             </div>
         <div class="div-border" id='app-showCountryInfo' id='sub-grid'>
             <h3>App: Show Info of Countries (Class + JSON)</h3>
@@ -63,7 +65,6 @@
             <h3>App: 15-Puzzle</h3>
             <p>click on buttons around the blank button to move the button '15' to the first row:</p>
         </div>
-     
         <div class='div-border' id='app3'>
             <h3>App 3: Umwandler - Converter</h3>
             <input type="number" name="" id="umzuwandeln">

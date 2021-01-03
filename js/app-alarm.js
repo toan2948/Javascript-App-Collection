@@ -69,10 +69,14 @@ function setAlarm(){
         btnStop.value='Stop Alarm';
         //add a click to 'stop-alarm' button
         btnStop.addEventListener("click", turnoffAlarm, false);
+        document.getElementById('set-alarm').style.display='none';
       }
     },10);
 }
 function turnoffAlarm(){
   audio.pause();
+  document.getElementById('set-alarm').style.display='inline';
+  document.getElementById('stop-alarm').style.display='none';
+  document.getElementById('show-timeDown').innerHTML='';
 }
 
