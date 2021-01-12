@@ -3,11 +3,10 @@
     grid-template-columns: 356px 356px 356px;
     grid-column-gap:20px;
     grid-row-gap: 20px;
-    align-content: space-evenly;
 }
 
+
 .div-border{
-    position: relative;
     border-style: solid;
     border-width: 2px;
     padding: 0 0 3px 3px;;

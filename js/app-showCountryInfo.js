@@ -20,6 +20,6 @@ function showCountryInfo(){
 	document.getElementById('country-name').innerText='Country: ' +countries[subIndex].name;
 	document.getElementById('coutry-population').innerText='Population: '+countries[subIndex].population +' millions';
 	let j = JSON.stringify(countries[subIndex]);
-	document.getElementById('country-JSON').innerHTML= 'Country Info in JSON format: <br>' + j;
+	document.getElementById('country-JSON').innerText= 'Country Info in JSON format:' + j;
 }
 
