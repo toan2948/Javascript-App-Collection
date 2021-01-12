@@ -1,7 +1,7 @@
 function generateSelect(){
   let html ='';
   html+=  "<select id='select-hour' onchange='selectHour()'>";
-  for(let i =0;i<25;i++){
+  for(let i=0;i<25;i++){
     html +=  '<option value="'+i +'">'+i+'</option>';
   }           
   html+='</select>' +':';
