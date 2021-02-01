@@ -9,8 +9,8 @@
 .div-border{
     border-style: solid;
     border-width: 2px;
-    padding: 0 0 3px 3px;;
-    height:280px;
+    padding: 0 0 30px 3px;;
+    height:400px;
 }
 
 #sub-grid{
@@ -19,4 +19,8 @@
 }
 .inline-select{
     display:inline;
+}
+
+#weatherAPI{
+    padding-left: 30px;
 }
