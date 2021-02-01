@@ -59,7 +59,10 @@ document.addEventListener('change',function(e){
 audio = new Audio('alarm.mp3');
 function setAlarm(){
   timeDown = (hour-h)*3600 + (minute-m)*60;
-  let timer = setInterval(function(){
+  if(timeDown <=0){
+      alert('die alamierende Zeit ist vorbei');
+  } else {
+    let timer = setInterval(function(){
       timeDown--;
       document.getElementById('show-timeDown').innerHTML=timeDown + ' :second(s) left'
       if(timeDown==0){
@@ -74,6 +77,8 @@ function setAlarm(){
         document.getElementById('set-alarm').style.display='none';
       }
     },10);
+  }
+  
 }
 function turnoffAlarm(){
   audio.pause();
