@@ -29,6 +29,7 @@ const processWeatherData = async (location)=>{
     <p>Temp: ${data.main.temp} °C</p>
     <p>Humidity: ${data.main.humidity} %</p>
     <p>Wind: ${data.wind.speed} km/h</p>
+    <p style="margin-bottom:0px; font-weight:bold">${data.weather[0].description}</p>
     <img src=${image} alt=""/>
     `;
 }
@@ -39,6 +40,7 @@ city_form.addEventListener('submit', (e) =>{
     processWeatherData(location);
     e.target.location.value ='';
 });
+
 
 
 

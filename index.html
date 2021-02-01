@@ -27,12 +27,12 @@
 <body onload="">
     <div class='grid-container'>
         <!-- App: Wecker -->
-        <div class='div-border' id='app-alarm' style="padding-left:40px;">
-                <h3>Alarm Clock with Sound</h3>
+        <div class='div-border' id='app-alarm' >
+                <h3 style="text-align: center">Alarm Clock with Sound</h3>
                 <p>Current time:</p>
                 <div id='time'>  
                 </div>
-                <div>
+                <div style="text-align: center;"">
                     <p>Choose an alarming time:</p>
                     <div class='inline-select' id='hour'>
                     </div>
@@ -45,17 +45,19 @@
             </div>
         <!-- App: Weather API -->
         <div class='div-border' id='weatherAPI'>
-            <h3>Check the weather</h3>
-            <p>Type the name of one city in the below box (Berlin, London...) and click Go</p>
-            <div id ='showWeatherData'></div>
+
+            <h3>Current weather</h3>
+            <p style="font-style: italic;">Type the name of one city in the below box (Berlin, London...) and click Go</p>
             <form id='submit_city' action="">
                 <input type="text" name="location" placeholder="Type a city ...">
                 <button type="submit">Go</button>
             </form>
+            <div id ='showWeatherData'></div>
+            
         </div>
         <!-- App: show info of Countries -->
         <div class="div-border" id='app-showCountryInfo' id='sub-grid'>
-            <h3>Show Info of Countries</h3>
+            <h3 style="text-align: center">Show Info of Countries</h3>
             <br>
             <div id='sub-grid'>
                 <div>
