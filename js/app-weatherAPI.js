@@ -1,7 +1,6 @@
 const api_key = '7930eb19227faa28448ec7f56358ee63';
 
 const city_form = document.getElementById('submit_city');
-console.log(city_form);
 
 const fetchWeatherData = async (location)=>{  
         const baseURL =`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${api_key}&units=metric`;
@@ -24,7 +23,6 @@ const processWeatherData = async (location)=>{
 city_form.addEventListener('submit', (e) =>{
     e.preventDefault();
     const location = e.target.location.value;
-    console.log (location);
     processWeatherData(location);
     e.target.location.value ='';
 });
