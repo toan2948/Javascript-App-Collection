@@ -32,7 +32,7 @@
                 <p>Current time:</p>
                 <div id='time'>  
                 </div>
-                <div style="text-align: center;"">
+                <div style="text-align: center;">
                     <p>Choose an alarming time:</p>
                     <div class='inline-select' id='hour'>
                     </div>
@@ -42,10 +42,9 @@
                     <p id='show-timeDown'></p>
                     <input id='stop-alarm' style="display:none" type="button" value="">
                 </div>
-            </div>
+        </div>
         <!-- App: Weather API -->
         <div class='div-border' id='weatherAPI'>
-
             <h3>Current weather</h3>
             <p style="font-style: italic;">Type the name of one city in the below box (Berlin, London...) and click Go</p>
             <form id='submit_city' action="">
@@ -71,8 +70,9 @@
             <div id='country-JSON' style="font-size:small"></div>          
         </div>
     </div>
+    <script src="js/app-weatherAPI.js"></script> 
+    <!-- // es funktionert nicht falls in <head> gelegt -->
 
-    <script src="js/app-weatherAPI.js"></script>
 
 </body>
 
