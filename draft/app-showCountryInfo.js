@@ -23,3 +23,19 @@ function showCountryInfo(){
 	document.getElementById('country-JSON').innerText= 'Country Info in JSON format:' + j;
 }
 
+// <!-- App: show info of Countries -->
+// <div class="div-border" id='app-showCountryInfo' id='sub-grid'>
+// 	<h3 style="text-align: center">Show Info of Countries</h3>
+// 	<br>
+// 	<div id='sub-grid'>
+// 		<div>
+// 			<img src="" id="country-flag" alt="no image" width="150" height='90'>
+// 		</div>
+// 		<div style="padding-top: 30px;">
+// 			<div id="country-name"></div>
+// 			<div id="coutry-population"></div>
+// 		</div>
+// 	</div>  
+// 	<div id='country-JSON' style="font-size:small"></div>          
+// </div>
+

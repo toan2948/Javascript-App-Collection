@@ -13,9 +13,9 @@
         window.addEventListener("load", myInit, true); 
         function myInit(){  
             //load the function of app-showCountryInfo
-            setInterval(showCountryInfo,1300);
+            setInterval(showCountryInfo,1100);
             // show the current time with the time running 
-            setTimeout(setInterval(startTime,300),0);
+            setTimeout(setInterval(startTime,300),300);
             generateSelect();
             processWeatherData("Berlin");
             };   
@@ -53,21 +53,6 @@
             </form>
             <div id ='showWeatherData'></div>
             
-        </div>
-        <!-- App: show info of Countries -->
-        <div class="div-border" id='app-showCountryInfo' id='sub-grid'>
-            <h3 style="text-align: center">Show Info of Countries</h3>
-            <br>
-            <div id='sub-grid'>
-                <div>
-                    <img src="" id="country-flag" alt="no image" width="150" height='90'>
-                </div>
-                <div style="padding-top: 30px;">
-                    <div id="country-name"></div>
-                    <div id="coutry-population"></div>
-                </div>
-            </div>  
-            <div id='country-JSON' style="font-size:small"></div>          
         </div>
     </div>
     <script src="js/app-weatherAPI.js"></script> 

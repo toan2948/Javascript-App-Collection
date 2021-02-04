@@ -7,7 +7,7 @@ let s='';
 let audio;
 
 //füge 0 vor Minuten, Sekunden falls sie als 10 kleiner sind
-function checkTime(i) {
+function checkDisplay(i) {
   if (i < 10) {
     i = "0" + i;
   }
@@ -20,15 +20,15 @@ function startTime() {
   h=d.getHours();
   m =d.getMinutes();
   s=d.getSeconds();
-  m= checkTime(m);
-  s= checkTime(s);
+  m= checkDisplay(m);
+  s= checkDisplay(s);
   document.getElementById('time').innerText= h + ':'+m+':'+s;
 }
 // erzeugen den Select Bereich für Stunde und Minuten
 function generateSelect(){
   let html ='';
   html+=  "<select id='select-hour'>";
-  for(let i=0;i<25;i++){
+  for(let i=0;i<24;i++){
     html +=  '<option value="'+i +'">'+i+'</option>';
   }           
   html+='</select>' +':';
@@ -56,6 +56,7 @@ document.addEventListener('change',function(e){
 });
 
 audio = new Audio('alarm.mp3');
+
 function setAlarm(){
   countDown = (hour-h)*3600 + (minute-m)*60;
   if(countDown <=0){
