@@ -39,3 +39,15 @@ function showCountryInfo(){
 // 	<div id='country-JSON' style="font-size:small"></div>          
 // </div>
 
+
+
+// window.addEventListener("load", myInit, true); 
+//         function myInit(){  
+//             //load the function of app-showCountryInfo
+//             setInterval(showCountryInfo,1100);
+//             // show the current time with the time running 
+//             setTimeout(setInterval(startTime,300),300);
+//             generateSelect();
+//             processWeatherData("Berlin");
+//             };   
+    
