@@ -26,25 +26,8 @@
 </head>
 <body onload="">
     <div class='grid-container'>
-        <!-- App: Wecker -->
-        <div class="div-border shadow p-3 mb-5 mt-3 bg-white rounded" id="app-alarm" >
-                <h3 style="text-align: center">Alarm Clock with Sound</h3>
-                <p>Current time:</p>
-                <div id='time'>  
-                </div>
-                <div style="text-align: center;">
-                    <p>Choose an alarming time:</p>
-                    <div class='inline-select' id='hour'>
-                    </div>
-                    <div class='inline-select' id='minute'>
-                    </div>
-                    <input id ='set-alarm' type="button" value="Set Alarm" onclick='setAlarm()'>
-                    <p id='show-timeDown'></p>
-                    <input id='stop-alarm' style="display:none" type="button" value="">
-                </div>
-        </div>
-        <!-- App: Weather API -->
-        <div class="shadow p-3 mb-5 mt-3 bg-white rounded" id='weatherAPI'>
+          <!-- App: Weather API -->
+          <div class="shadow p-3 mb-5 mt-3 bg-white rounded" id='weatherAPI'>
             <h3 class="text-center">Current weather</h3>
             <p style="font-style: italic;">Type the name of one city in the below box (Berlin, London...) and click Go</p>
             <form id='submit_city' >
@@ -64,6 +47,23 @@
                     </div>
                 </div> 
             </div>
+        </div>
+        <!-- App: Wecker -->
+        <div class="div-border shadow p-3 mb-5 mt-3 bg-white rounded" id="app-alarm" >
+                <h3 style="text-align: center">Alarm Clock with Sound</h3>
+                <p>Current time:</p>
+                <div id='time'>  
+                </div>
+                <div style="text-align: center;">
+                    <p>Choose an alarming time:</p>
+                    <div class='inline-select' id='hour'>
+                    </div>
+                    <div class='inline-select' id='minute'>
+                    </div>
+                    <input class ="btn btn-outline-secondary btn-sm" id ='set-alarm' type="button" value="Set Alarm" onclick='setAlarm()'>
+                    <p id='show-timeDown'></p>
+                    <input id='stop-alarm' style="display:none" type="button" value="">
+                </div>
         </div>
     </div>
     <script src="js/app-weatherAPI.js"></script> 
