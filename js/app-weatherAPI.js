@@ -17,15 +17,29 @@ const processWeatherData = async (location)=>{
     const data = await fetchWeatherData(location);
     let icon_id = data.weather[0].icon;
     const image= `http://openweathermap.org/img/wn/${icon_id}@2x.png`;
-    document.getElementById('showWeatherData').innerHTML =`
-    <h3 style="color:blue">${data.name}</h3>
-    <p>Temp: ${data.main.temp} °C</p>
-    <p>Humidity: ${data.main.humidity} %</p>
-    <p>Wind: ${data.wind.speed} km/h</p>
-    <p style="margin-bottom:0px; font-weight:bold">${data.weather[0].description}</p>
-    <img src=${image} alt=""/>
-    `;
+    document.getElementById('showTemp').innerHTML =`
+        <h3 id="city" style="color:blue">${data.name}</h3>
+        <p> ${data.main.temp} °C</p>`;
+    document.getElementById('showOtherInfo').innerHTML =`
+        <p>Humidity: ${data.main.humidity} %</p>
+        <p>Wind: ${data.wind.speed} km/h</p>
+        <p style="margin-bottom:0px; font-weight:bold">${data.weather[0].description}</p>
+        <img src=${image} alt=""/>
+        `;
 }
+
+
+const changeImage =()=>{
+    const date = new Date();
+    const h = date.getHours();
+    console.log(h);
+    if(h >= 5 && h <= 18) {
+        document.getElementById("wetter-image").src ="img-wetter/day_image.svg";
+    } if( h < 5 && h >= 0 || h > 18) {
+        document.getElementById("wetter-image").src ="img-wetter/night_image.svg";
+    }
+}
+
 
 //Eingeben die Name einer Stadt 
 city_form.addEventListener('submit', (e) =>{
